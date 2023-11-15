@@ -27,6 +27,7 @@ void main()
 
 
     vec4 c;
+                //c代表讀貼圖的顏色，灰階 //在0~1之間切成六等分，亮到暗不同色階 //兩張貼圖權重分配：每一等分皆有重疊
                 float step = 1. / 6.;
                 if( shading <= step ){   
                     c = mix( texture2D( u_tex6, vUv ), texture2D( u_tex5, vUv ), 6. * shading );
